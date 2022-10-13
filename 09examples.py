@@ -19,15 +19,21 @@ elif isMarried == 'N' or 'n':
 else:
     print('잘못 누르셨습니다...')
 
-#25
+
+
+#25 - 복권 발행 프로그램 v1
+# 난수 생성시 random 모듈의 randrange(범위) - randrange(start, ed-1)
+
+import random as rnd
 
 usernum1 = int(input("첫번째 번호 입력하세요"))
 usernum2 = int(input("두번째 번호 입력하세요"))
 usernum3 = int(input("세번째 번호 입력하세요"))
 
-rnum1, rnum2, rnum3 = 1, 2, 3
+lottokey = rnd.randrange(1, 10)
+print(lottokey)
 
-if usernum1 == rnum1 and usernum2 == rnum2 and usernum3 == rnum3:
+if usernum1 == lottokey or usernum2 == lottokey or usernum3 == lottokey:
     print("당첨입니다!!")
 else:
     print("꽝!")
@@ -44,4 +50,13 @@ elif year % 4 == 0 and year % 400 == 0:
     print(f'{year}년은 윤년입니다.')
 else:
     print(f'{year}년은 평년입니다.')
+
+
+
+#28
+
+number = 30
+if number % 2 == 0:
+    print('입력한 값은 짝수입니다.')
+else: print('입력한 값은 홀수입니다.')
 
