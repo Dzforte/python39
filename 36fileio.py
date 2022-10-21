@@ -25,12 +25,12 @@
 # 파일쓰기 작업이 끝나면 반드시 close 해줘야 함
 # 단, with문을 사용하는 경우 close 생략 가능
 
-f = open('hello.dat', 'w')  # 쓰기모드로 파일 생성
+f = open('data/hello.dat', 'w')  # 쓰기모드로 파일 생성
 f.write('Hello, World!!') # 지정한 파일에 내용쓰기
 f.close()                 # 작업종료 위해 파일 닫음
 
 # with open(경로/파일명, 작업모드, 인코딩) as 별칭  #
-with open('hello2.dat', 'w', encoding='utf-8') as f:
+with open('data/hello2.dat', 'w', encoding='utf-8') as f:
     f.write('안녕, 세상아!!!')
 
 # 회원정보를 입력받아 member.dat에 저장
@@ -45,7 +45,7 @@ email = input('이메일은')
 data = f'{userid}/{passwd}/{name}/{email}'
 print(data)
 
-with open('hello2.dat', 'w', encoding='utf-8') as f:
+with open('data/hello2.dat', 'w', encoding='utf-8') as f:
     f.write(data + '\n')
 
 
@@ -64,5 +64,5 @@ mat = int(input('수학 점수를 입력하시오: '))
 
 score = f'{name}/{kor}/{eng}/{mat}'
 
-with open('sungjuk.dat', 'a', encoding='UTF-8') as f:
+with open('data/sungjuk.dat', 'a', encoding='UTF-8') as f:
     f.write(score + '\n')
